@@ -1,0 +1,86 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/mine.css">
+  <link rel="stylesheet" href=
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <!-- CDN of Bootstrap -->
+      <link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity=
+  "sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" 
+          crossorigin="anonymous">
+    
+      <!-- CDN of mark.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"
+          integrity=
+  "sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww=="
+          crossorigin="anonymous">
+      </script>
+</head>
+
+<body>
+
+  <div class="w-75 mx-auto shadow-lg p-5 m-5">
+    <h1>CRUD SYSTEM</h1>
+
+    <label>productName:</label>
+    <div class="valid">
+      
+      <input onblur="validateInputs()" class="form-control" id="productName">
+      <i id="i" class="fa-regular fa-xl fa-circle-xmark d-none"></i>
+      <p id="p" class="d-none">write the first charachter capital and from 2 to 8 small charachters </p>
+    </div>
+
+    <label>ProductCategory:</label>
+    <input class="form-control" id="ProductCategory">
+
+
+    <label>ProductPrice:</label>
+    <input class="form-control" id="ProductPrice">
+
+
+    <label>ProductDescription:</label>
+    <textarea id="ProductDescription" class="form-control"></textarea>
+
+
+
+    <input type="button" id="btn" onclick=" createProduct(); changeTxt();" class="btn btn-primary mt-3">
+
+    <button onclick="clearText();" class="btn btn-primary mt-3">clear</button>
+  </div>
+
+
+
+  <input onkeyup="searchText(this);" id="search" type="text" placeholder="search....." class="form-control w-50 mx-auto">
+
+
+  <table class="table w-75 mx-auto mt-3">
+    <thead>
+
+      <th>index</th>
+      <th>name</th>
+      <th>category</th>
+      <th>price</th>
+      <th>description</th>
+      <th>update</th>
+      <th>delete</th>
+
+    </thead>
+    <tbody id="tbody">
+    
+    
+    </tbody>
+  </table>
+
+
+
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
